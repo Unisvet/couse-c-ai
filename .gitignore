@@ -1,0 +1,48 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints & cache
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Secrets, API Keys & Environment Variables (Never commit keys!)
+.env
+.env.*
+*.env
+!.env.example
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Antigravity & Agent scratch directories
+scratch/
+tmp/
+temp/
+*.log
