@@ -31,6 +31,7 @@ Divide your bridge crew across the four station roles below. Each officer implem
 **Objective:** Implement a `ThoughtNode` tree data structure and `TreeOfThoughtsSolver` supporting both **Breadth-First Beam Search (`ToT-BFS`)** and **Depth-First Backtracking Search (`ToT-DFS`)** under a strict inference compute budget (`max_expansions`).
 
 **Tasks:**
+
 1. **`ThoughtNode` Dataclass / Class:** Store the semantic thought `state: str`, `depth: int`, `step_score: float`, `cumulative_score: float`, `parent: Optional[ThoughtNode]`, and `children: List[ThoughtNode]`, plus a helper `get_trajectory() -> List[str]` that reconstructs the reasoning chain from root to node.
 2. **`bfs_beam_search(root, generator_fn, evaluator_fn, max_depth)`:**
    - Maintain an active frontier (beam) of at most `beam_width` ($B$) nodes at each depth $d \in \{1, \dots, \text{max\_depth}\}$.
@@ -48,6 +49,7 @@ Divide your bridge crew across the four station roles below. Each officer implem
 **Objective:** Implement the 4 canonical phases of **Monte Carlo Tree Search (MCTS)** guided by LLM policy priors $P_\theta(a \mid s)$ and the **PUCT** (Predictor + Upper Confidence Bound applied to Trees) formula.
 
 **Tasks:**
+
 1. **Exact PUCT Formula (`puct_score`):**
    $$\text{PUCT}(s, a) = Q(s, a) + c_{\text{puct}} \cdot P_\theta(a \mid s) \frac{\sqrt{N(s)}}{1 + N(s, a)}$$
    where $Q(s, a) = \frac{W(s, a)}{N(s, a)}$ if $N(s, a) > 0$ else $0.0$, $N(s) = \max(1, \text{parent.visit\_count})$, and $c_{\text{puct}}$ is the exploration constant.
@@ -64,6 +66,7 @@ Divide your bridge crew across the four station roles below. Each officer implem
 **Objective:** Implement `ProcessRewardEvaluator` to score intermediate reasoning steps $z_t$, aggregate step scores across trajectories, expose **Outcome Reward Model (ORM) false-positive traps**, and estimate step validity via **Math-Shepherd** Monte Carlo rollouts.
 
 **Tasks:**
+
 1. **Trajectory Step Reductions:** Given step scores $[r_1, r_2, \dots, r_T] \in (0, 1]^T$, implement:
    - **Minimum Reduction (`min`):** $\min_{t=1}^T r_t$ (weakest-link detector)
    - **Product Reduction (`prod`):** $\prod_{t=1}^T r_t$ (joint validity probability)
@@ -80,6 +83,7 @@ Divide your bridge crew across the four station roles below. Each officer implem
 **Objective:** Implement `EventHorizonPruner` (Ship Anomaly 07) to sever hallucinated branches before they cross the Sagittarius A* Event Horizon ($r_{\text{PRM}} < \tau_{\text{horizon}}$) and defend against **adversarial PRM reward hacking**.
 
 **Tasks:**
+
 1. **Adversarial Reward-Hacking Detector (`check_reward_hacking`):**
    - Detect **Sycophantic Filler Injection**: vacuous self-congratulatory steps (e.g., *"Let us carefully verify this 100% rigorous step..."*, *"Obviously, by trivial inspection..."*) that artificially inflate naive PRM scores without advancing mathematical state.
    - Detect **Step-Splitting Inflation**: redundant micro-steps or repeated equations designed to dilute a low-scoring step under mean aggregation.
