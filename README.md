@@ -16,6 +16,7 @@ This repository contains the starter code, briefing specifications, role deliver
 | **Mission 04** | *Betelgeuse / Orion* | Direct Preference Optimization (DPO), SimPO & Activation Steering | [`mission-04/`](./mission-04/) |
 | **Mission 05** | *Crab Pulsar Remnant* | Dual-Path GraphRAG, BM25 + HNSW Hybrid Search & Google NotebookLM | [`mission-05/`](./mission-05/) |
 | **Mission 06** | *Eta Carinae Nebula* | Autonomous Warp State Machine, Tool Calling Contracts & Deliberation Loop | [`mission-06/`](./mission-06/) |
+| **Mission 07** | *Sagittarius A* (`SEC-07-SGR`)* | Test-Time Compute Scaling, Tree-of-Thoughts, MCTS (PUCT) & Process Reward Models (PRM) | [`mission-07/`](./mission-07/) |
 
 ---
 
