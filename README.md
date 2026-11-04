@@ -18,6 +18,7 @@ This repository contains the starter code, briefing specifications, role deliver
 | **Mission 06** | *Eta Carinae Nebula* | Autonomous Warp State Machine, Tool Calling Contracts & Deliberation Loop | [`mission-06/`](./mission-06/) |
 | **Mission 07** | *Sagittarius A* (`SEC-07-SGR`)* | Test-Time Compute Scaling, Tree-of-Thoughts, MCTS (PUCT) & Process Reward Models (PRM) | [`mission-07/`](./mission-07/) |
 | **Mission 08** | *Cygnus X-1 & Veil Nebula (`SEC-08-CYG`)* | ReWOO DAG Planning, Reflexion Traceback Surgery, MemGPT Virtual Context Paging & MemoryGraft Defense | [`mission-08/`](./mission-08/) |
+| **Mission 09** | *Large Magellanic Cloud / Tarantula Nebula (`SEC-09-LMC`)* | Agentic RAG, Corrective RAG (CRAG), Self-RAG Reflection & Hardware-Accelerated Retrieval on Free Google TPUs (`torch_tpu`) | [`mission-09/`](./mission-09/) |
 
 ---
 
